@@ -1,9 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
+const users= [];
+
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/add-user', function (req, res, next) {
+  res.render('add-user', {title: 'Assignment 4 - Add user'});
 });
 
-module.exports = router;
+router.post('/add-user', function (req, res, next) {
+  users.push({user: req.body.user});
+  res.redirect('/')
+});
+
+exports.router = router;
+exports.users = users;

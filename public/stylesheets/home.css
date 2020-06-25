@@ -1,0 +1,41 @@
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 10px;
+    margin: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-bar {
+    height: 50px;
+    background-color: lightblue;
+    width: 100%;
+}
+
+.navigation-items {
+    display: flex;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.users {
+    margin: 50px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.user {
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
