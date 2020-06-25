@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <link rel='stylesheet' href='/stylesheets/home.css'/>
+</head>
+<body>
+<nav class="nav-bar">
+  <ul class="navigation-items">
+    <li><a class="active" href="/">Users</a></li>
+    <li><a href="/add-user">Add user</a></li>
+  </ul>
+
+  <div class="users">
+    <% for (let user of users) { %>
+      <div class="user">
+        <p><%= user.user %></p>
+      </div>
+    <% } %>
+  </div>
+</nav>
+</body>
 </html>
