@@ -1,6 +1,6 @@
 <nav class="nav-bar">
     <ul class="navigation-items">
-        <li><a class="active" href="/">Users</a></li>
-        <li><a href="/add-user">Add user</a></li>
+        <li><a class="<%= path === '/' ? 'active' : '' %>" href="/">Add user</a></li>
+        <li><a class="<%= path === '/users' ? 'active' : '' %>" href="/users">Users</a></li>
     </ul>
 </nav>

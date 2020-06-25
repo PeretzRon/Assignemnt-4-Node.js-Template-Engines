@@ -1,17 +1,17 @@
+
 <%- include('includes/head.ejs') %>
-  <link rel='stylesheet' href='/stylesheets/home.css'/>
+<link rel='stylesheet' href='/stylesheets/home.css'/>
+<link rel='stylesheet' href='/stylesheets/add-user.css'/>
 </head>
+
 <body>
 <%- include('includes/navigation.ejs') %>
-  <div class="users">
-    <% if(users.length > 0 ) { %>
-    <% for (let user of users) { %>
-      <div class="user">
-        <p><%= user.user %></p>
-      </div>
-    <% } %>
-  </div>
-<% } else { %>
-  <h3>There are no registered users</h3>
-<% } %>
+<div class="wrapper">
+  <form action="/add-user" method="POST">
+    <label>
+      <input name="user" placeholder="enter user" type="text"/>
+    </label>
+    <button class="btn" type="submit">Save</button>
+  </form>
+</div>
 <%- include('includes/end.ejs') %>

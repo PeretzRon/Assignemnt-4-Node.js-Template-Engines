@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const userData = require('./users')
 
-/* GET home page. */
+const users= [];
+
 router.get('/', function (req, res, next) {
-  const users = userData.users;
-  res.render('index', {title: 'Assignment 4 - homepage', users: users});
+  res.render('index', {title: 'Assignment 4 - homepage', path: '/'});
 });
 
-module.exports = router;
+router.post('/add-user', function (req, res, next) {
+  users.push({user: req.body.user});
+  res.redirect('/users')
+});
+
+exports.router = router;
+exports.users = users;
+
+
